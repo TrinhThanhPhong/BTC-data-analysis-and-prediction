@@ -1,13 +1,14 @@
 # Bitcoin Price Prediction Analysis
 
-This project analyzes and predicts Bitcoin prices using the Prophet model, a powerful time series forecasting tool developed by Facebook.
+This project analyzes and predicts Bitcoin prices using two different models: Prophet (Facebook's time series forecasting tool) and LSTM (Long Short-Term Memory neural network).
 
 ## Overview
 
 The analysis uses historical Bitcoin price data to:
 - Analyze price trends and patterns
 - Visualize price movements and distributions
-- Predict future Bitcoin prices using the Prophet model
+- Compare predictions from Prophet and LSTM models
+- Predict future Bitcoin prices
 
 ## Dataset
 
@@ -31,18 +32,42 @@ The project uses daily Bitcoin price data including:
   - May not capture extreme market volatility
   - Requires sufficient historical data for accurate predictions
 
+### LSTM Model
+- Advantages:
+  - Better at capturing complex patterns and non-linear relationships
+  - Can learn long-term dependencies in the data
+  - More suitable for highly volatile markets
+  - Generally provides more accurate predictions for Bitcoin price
+
+- Limitations:
+  - Requires more data for training
+  - More computationally intensive
+  - Needs careful hyperparameter tuning
+  - May be prone to overfitting
+
+## Important Note
+The Bitcoin market is highly volatile and influenced by various external factors such as:
+- Market sentiment
+- Regulatory news
+- Global economic conditions
+- Technological developments
+- Institutional adoption
+
+Due to these complex and unpredictable factors, even the most sophisticated prediction models may not provide accurate forecasts. The predictions should be used as one of many tools for market analysis, not as the sole basis for investment decisions.
+
 ## Project Structure
 - `main.ipynb`: Main analysis and prediction notebook
 - `BTC-Daily.csv`: Historical Bitcoin price dataset
 
 ## Results
-The model's performance is evaluated using:
+The models' performance is evaluated using:
 - Mean Absolute Error (MAE)
 - Root Mean Squared Error (RMSE)
 
 ## Requirements
 - Python 3.x
 - Prophet
+- TensorFlow/Keras
 - Pandas
 - NumPy
 - Matplotlib
